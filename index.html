@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For My Sister ❤️</title>
+<meta name="description" content="A little surprise made with love, for my sister.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+<style>
+    /* ==========================================================
+       For My Sister - sister.html styles
+       class prefix: sister-index-
+       ========================================================== */
+
+    :root{
+        --rose:#c8323c;
+        --pink:#f4b6c8;
+        --cream:#fff8f1;
+        --ink:#5a2a33;
+        --muted:#8a6d70;
+        --plum:#8a3350;
+    }
+
+    *,
+    *::before,
+    *::after{
+        box-sizing:border-box;
+    }
+
+    html,
+    body{
+        height:100%;
+    }
+
+    body{
+        margin:0;
+        font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+        color:var(--ink);
+        overflow:hidden;
+        background:repeating-linear-gradient(90deg,#fbe3ea 0 22px,#fff6ee 22px 44px);
+    }
+
+    h1,
+    h2,
+    p,
+    figure{
+        margin:0;
+    }
+
+    button{
+        font-family:inherit;
+    }
+
+    :focus-visible{
+        outline:2px solid var(--rose);
+        outline-offset:3px;
+    }
+
+    /* ---------- BACKGROUND STARS + STICKY NOTES ---------- */
+
+    .sister-index-stars{
+        position:fixed;
+        inset:0;
+        pointer-events:none;
+        z-index:0;
+    }
+
+    .sister-index-stars span{
+        position:absolute;
+        color:#b79ad8;
+        opacity:.6;
+        font-size:14px;
+    }
+
+    .sister-index-sticky{
+        position:absolute;
+        padding:.5rem .7rem;
+        font-family:'Caveat Brush',cursive;
+        font-size:1.05rem;
+        color:#7a3b4a;
+        background:#fff3a8;
+        box-shadow:2px 3px 8px #0002;
+        border-radius:2px;
+        white-space:nowrap;
+    }
+
+    .sister-index-sticky:nth-child(3n){
+        background:#ffd0dc;
+    }
+
+    .sister-index-sticky:nth-child(3n+1){
+        background:#d6f2ff;
+    }
+
+    /* ---------- SCENES ---------- */
+
+    .sister-index-scene{
+        position:fixed;
+        inset:0;
+        display:none;
+        flex-direction:column;
+        align-items:center;
+        justify-content:safe center;
+        gap:1.4rem;
+        padding:1.5rem;
+        z-index:1;
+        overflow-y:auto;
+    }
+
+    .sister-index-scene.sister-index-is-active{
+        display:flex;
+    }
+
+    /* stop cards squashing into the heading */
+    .sister-index-scene > *{
+        flex-shrink:0;
+    }
+
+    .sister-index-hand{
+        font-family:'Caveat Brush',cursive;
+        color:var(--rose);
+        font-weight:400;
+        text-align:center;
+        font-size:clamp(2rem,6vw,3.2rem);
+        transform:rotate(-2deg);
+    }
+
+    .sister-index-hand.sister-index-big{
+        font-size:clamp(2.6rem,9vw,5rem);
+    }
+
+    .sister-index-next{
+        position:fixed;
+        right:18px;
+        top:50%;
+        border:0;
+        background:none;
+        color:var(--rose);
+        font-size:3.4rem;
+        cursor:pointer;
+        animation:sister-index-nudge 1s infinite;
+    }
+
+    .sister-index-next[hidden]{
+        display:none;
+    }
+
+    @keyframes sister-index-nudge{
+        50%{
+            transform:translateX(6px);
+        }
+    }
+
+    /* ---------- MUSIC BUTTON ---------- */
+
+    .sister-index-music{
+        position:fixed;
+        top:14px;
+        right:14px;
+        z-index:9;
+        width:42px;
+        height:42px;
+        border:0;
+        border-radius:50%;
+        background:#fff;
+        color:var(--rose);
+        font-size:1.2rem;
+        box-shadow:0 3px 10px #0002;
+        cursor:pointer;
+    }
+
+    .sister-index-music[hidden]{
+        display:none;
+    }
+
+    /* ---------- 1. NOTIFICATION ---------- */
+
+    .sister-index-phone{
+        border:0;
+        background:none;
+        cursor:pointer;
+        animation:sister-index-wob 1.6s ease-in-out infinite;
+    }
+
+    .sister-index-screen{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        gap:.4rem;
+        width:150px;
+        height:240px;
+        background:#ff9fb8;
+        border:10px solid #ff7fa3;
+        border-radius:26px;
+        box-shadow:0 12px 30px #c8323c44;
+    }
+
+    .sister-index-heart{
+        font-size:4rem;
+        color:#fff;
+        background:#ffd2de;
+        border-radius:14px;
+        padding:.2rem .8rem;
+    }
+
+    .sister-index-click{
+        font-family:'Caveat Brush',cursive;
+        color:#fff;
+        font-size:1.4rem;
+    }
+
+    @keyframes sister-index-wob{
+        0%,
+        100%{
+            transform:rotate(-4deg);
+        }
+
+        50%{
+            transform:rotate(4deg) scale(1.04);
+        }
+    }
+
+    .sister-index-float{
+        position:absolute;
+        font-size:2.2rem;
+    }
+
+    .sister-index-f1{
+        left:12%;
+        bottom:12%;
+    }
+
+    .sister-index-f2{
+        right:14%;
+        top:18%;
+    }
+
+    /* ---------- 2. INTRO ---------- */
+
+    .sister-index-intro{
+        display:flex;
+        gap:2rem;
+        align-items:center;
+        justify-content:center;
+        flex-wrap:wrap;
+        max-width:860px;
+    }
+
+    .sister-index-frame{
+        width:min(260px,70vw);
+        aspect-ratio:3/4;
+        border-radius:50%;
+        border:12px solid #b8c27a;
+        outline:4px solid #8a9440;
+        overflow:hidden;
+        background:#f3e7d7;
+        box-shadow:0 10px 24px #0002;
+    }
+
+    .sister-index-frame img,
+    .sister-index-ph{
+        display:block;
+        width:100%;
+        height:100%;
+        object-fit:contain;
+    }
+
+    .sister-index-ph{
+        display:grid;
+        place-items:center;
+        text-align:center;
+        padding:1rem;
+        font-size:.85rem;
+    }
+
+    .sister-index-def{
+        background:#fffdfb;
+        border:2px solid #e8d6cf;
+        border-radius:10px;
+        padding:1.4rem;
+        max-width:340px;
+        box-shadow:0 8px 20px #0001;
+    }
+
+    .sister-index-def h2{
+        font-family:'Playfair Display',serif;
+        font-size:2.4rem;
+    }
+
+    .sister-index-def small{
+        color:var(--muted);
+    }
+
+    .sister-index-def p{
+        font-size:.85rem;
+        line-height:1.6;
+        margin-top:.8rem;
+    }
+
+    /* ---------- 3. AWARD ---------- */
+
+    .sister-index-loader{
+        text-align:center;
+    }
+
+    .sister-index-bar{
+        width:min(300px,75vw);
+        height:26px;
+        border:3px solid #7a4a9a;
+        border-radius:6px;
+        background:#fff;
+        padding:3px;
+    }
+
+    .sister-index-bar i{
+        display:block;
+        height:100%;
+        width:0;
+        background:linear-gradient(90deg,#c9a4e8,#9d6fd0);
+        border-radius:3px;
+    }
+
+    .sister-index-loader p{
+        font-size:.7rem;
+        letter-spacing:.2em;
+        margin-top:.5rem;
+    }
+
+    .sister-index-cert{
+        display:none;
+        width:min(520px,92vw);
+        text-align:center;
+        background:#fff4f7;
+        border:10px double #e79ab4;
+        padding:2rem 1.4rem;
+        box-shadow:0 10px 26px #0002;
+    }
+
+    .sister-index-cert h2{
+        font-family:'Playfair Display',serif;
+        color:#b04a68;
+        font-size:2rem;
+    }
+
+    .sister-index-cert p{
+        font-size:.85rem;
+        line-height:1.6;
+        margin:.7rem 0;
+    }
+
+    .sister-index-name{
+        font-family:'Caveat Brush',cursive;
+        font-size:2.6rem;
+        color:var(--plum);
+    }
+
+    .sister-index-seal{
+        font-size:2.4rem;
+    }
+
+    /* ---------- 4. YOU ARE MY ---------- */
+
+    .sister-index-chips{
+        position:relative;
+        display:flex;
+        flex-wrap:wrap;
+        gap:.7rem 1rem;
+        justify-content:center;
+        align-items:center;
+        max-width:620px;
+        padding:.5rem;
+    }
+
+    .sister-index-chips span{
+        font-family:'Caveat Brush',cursive;
+        font-size:clamp(1.15rem,4.2vw,1.7rem);
+        color:#8a2e3c;
+        background:#fff;
+        border:2px dashed #f0a8ba;
+        border-radius:20px;
+        padding:.2rem .9rem;
+        box-shadow:0 3px 8px #0001;
+    }
+
+    .sister-index-chips span:nth-child(odd){
+        rotate:-3deg;
+    }
+
+    .sister-index-chips span:nth-child(even){
+        rotate:3deg;
+    }
+
+    .sister-index-chips .sister-index-mid{
+        width:clamp(90px,24vw,130px);
+        height:auto;
+        order:0;
+    }
+
+    /* ---------- 5. MEMORIES ---------- */
+
+    .sister-index-gsearch{
+        display:flex;
+        justify-content:space-between;
+        gap:1rem;
+        background:#fff;
+        border-radius:30px;
+        padding:.6rem 1.2rem;
+        box-shadow:0 3px 10px #0002;
+        font-size:.95rem;
+        width:min(420px,90vw);
+    }
+
+    .sister-index-tabs{
+        display:flex;
+        gap:.9rem;
+        flex-wrap:wrap;
+        justify-content:center;
+        font-size:.8rem;
+        color:var(--muted);
+    }
+
+    .sister-index-tabs span{
+        cursor:pointer;
+        padding-bottom:2px;
+        border-bottom:2px solid transparent;
+    }
+
+    .sister-index-tabs sup{
+        font-size:.6rem;
+        color:#b0848d;
+    }
+
+    .sister-index-tabs .sister-index-is-on{
+        color:#1a73e8;
+        border-color:#1a73e8;
+    }
+
+    .sister-index-grid{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:8px;
+        width:min(640px,94vw);
+        padding-bottom:70px;
+    }
+
+    .sister-index-grid.sister-index-is-one{
+        grid-template-columns:1fr;
+        width:min(300px,80vw);
+    }
+
+    .sister-index-grid figure{
+        position:relative;
+        aspect-ratio:3/4;
+        border-radius:12px;
+        overflow:hidden;
+        background:#fff7f9;
+        border:3px solid #fff;
+        box-shadow:0 4px 12px #0002;
+        rotate:-1.5deg;
+        cursor:pointer;
+    }
+
+    .sister-index-grid figure:nth-child(even){
+        rotate:1.5deg;
+    }
+
+    /* show full photos, no cropping */
+    .sister-index-grid img,
+    .sister-index-grid video{
+        display:block;
+        width:100%;
+        height:100%;
+        object-fit:contain;
+        background:#fff7f9;
+    }
+
+    .sister-index-grid .sister-index-is-empty{
+        display:grid;
+        place-items:center;
+        background:#fde0e8;
+        cursor:default;
+    }
+
+    .sister-index-grid .sister-index-is-empty::after{
+        content:attr(data-name);
+        font-size:.65rem;
+        text-align:center;
+        padding:2px;
+    }
+
+    .sister-index-grid .sister-index-is-empty > *{
+        display:none;
+    }
+
+    .sister-index-play{
+        position:absolute;
+        inset:0;
+        display:grid;
+        place-items:center;
+        font-style:normal;
+        color:#fff;
+        font-size:2.4rem;
+        text-shadow:0 2px 8px #0008;
+        pointer-events:none;
+    }
+
+    .sister-index-nothing{
+        grid-column:1/-1;
+        text-align:center;
+        font-family:'Caveat Brush',cursive;
+        font-size:1.5rem;
+        color:var(--rose);
+    }
+
+    .sister-index-nothing[hidden]{
+        display:none;
+    }
+
+    /* ---------- LIGHTBOX ---------- */
+
+    .sister-index-lb{
+        position:fixed;
+        inset:0;
+        z-index:20;
+        background:#000c;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        padding:1rem;
+    }
+
+    .sister-index-lb[hidden]{
+        display:none;
+    }
+
+    .sister-index-lb .sister-index-box img,
+    .sister-index-lb .sister-index-box video{
+        max-width:92vw;
+        max-height:84vh;
+        border-radius:12px;
+        border:5px solid #fff;
+    }
+
+    .sister-index-lb .sister-index-x{
+        position:absolute;
+        top:14px;
+        right:14px;
+        width:40px;
+        height:40px;
+        border:0;
+        border-radius:50%;
+        background:#fff;
+        color:var(--rose);
+        font-size:1.1rem;
+        cursor:pointer;
+    }
+
+    /* ---------- 6 / 7 / 8. LETTERS ---------- */
+
+    .sister-index-letter{
+        background:#fffdf9;
+        max-width:min(620px,100%);
+        width:100%;
+        padding:2rem 1.6rem;
+        border-radius:14px;
+        border:2px dashed var(--pink);
+        box-shadow:0 10px 30px #0002;
+        max-height:92vh;
+        overflow-y:auto;
+    }
+
+    .sister-index-letter p{
+        line-height:1.75;
+        font-size:.95rem;
+        margin-top:1rem;
+    }
+
+    .sister-index-letter .sister-index-by{
+        text-align:right;
+        font-family:'Caveat Brush',cursive;
+        font-size:1.2rem;
+        color:var(--rose);
+    }
+
+    .sister-index-note-text{
+        white-space:pre-line;
+    }
+
+    .sister-index-lines-card{
+        text-align:center;
+    }
+
+    .sister-index-lines-card q{
+        display:block;
+        font-family:'Playfair Display',serif;
+        font-style:italic;
+        font-size:1.05rem;
+        margin-top:.7rem;
+        color:var(--plum);
+        quotes:none;
+    }
+
+    .sister-index-lines-card q:first-child{
+        margin-top:0;
+    }
+
+    .sister-index-again{
+        margin:1.4rem auto 0;
+        display:block;
+        border:0;
+        background:var(--rose);
+        color:#fff;
+        padding:.6rem 1.4rem;
+        border-radius:30px;
+        font:inherit;
+        cursor:pointer;
+    }
+
+    /* ---------- CATS + SPEECH BUBBLE ---------- */
+
+    .sister-index-cat{
+        width:110px;
+        height:110px;
+        filter:drop-shadow(0 4px 6px #0002);
+    }
+
+    .sister-index-cat.sister-index-c1,
+    .sister-index-cat.sister-index-c2{
+        position:fixed;
+        bottom:6px;
+        z-index:2;
+        pointer-events:none;
+        width:clamp(70px,16vw,120px);
+        height:auto;
+        animation:sister-index-bob 2.4s ease-in-out infinite;
+    }
+
+    .sister-index-cat.sister-index-c1{
+        left:6px;
+    }
+
+    .sister-index-cat.sister-index-c2{
+        right:6px;
+        animation-delay:-1.2s;
+    }
+
+    @keyframes sister-index-bob{
+        50%{
+            transform:translateY(-8px) rotate(3deg);
+        }
+    }
+
+    .sister-index-bubble{
+        position:fixed;
+        left:clamp(70px,17vw,120px);
+        bottom:clamp(60px,14vw,100px);
+        z-index:3;
+        background:#fff;
+        color:var(--ink);
+        border:2px solid #e8c8d0;
+        border-radius:16px;
+        padding:.35rem .8rem;
+        font-size:.8rem;
+        pointer-events:none;
+        box-shadow:0 3px 8px #0002;
+        max-width:170px;
+    }
+
+    .sister-index-bubble::after{
+        content:'';
+        position:absolute;
+        left:-7px;
+        bottom:8px;
+        border:7px solid transparent;
+        border-right-color:#fff;
+        border-left:0;
+    }
+
+    .sister-index-pop{
+        position:fixed;
+        z-index:9;
+        pointer-events:none;
+        font-size:1.4rem;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+
+    @media (max-width:768px){
+        /* room for cats + bubble */
+        .sister-index-scene{
+            padding:1rem 1rem calc(clamp(70px,16vw,120px) + 56px);
+            gap:1rem;
+        }
+
+        /* scene scrolls, not the card */
+        .sister-index-letter{
+            max-height:none;
+            overflow:visible;
+            padding:1.5rem 1.1rem;
+        }
+
+        .sister-index-bubble{
+            left:8px;
+            bottom:calc(clamp(70px,16vw,120px) + 14px);
+            max-width:60vw;
+            font-size:.75rem;
+        }
+
+        .sister-index-bubble::after{
+            left:22px;
+            bottom:-7px;
+            border:7px solid transparent;
+            border-bottom:0;
+            border-top-color:#fff;
+            border-right-color:transparent;
+        }
+
+        .sister-index-lines-card q{
+            font-size:1rem;
+        }
+
+        .sister-index-next{
+            top:auto;
+            bottom:calc(clamp(70px,16vw,120px) + 10px);
+            right:14px;
+            font-size:2.8rem;
+            background:#fffc;
+            border-radius:50%;
+            width:48px;
+            height:48px;
+            line-height:44px;
+            padding:0;
+        }
+
+        .sister-index-intro{
+            gap:1.2rem;
+        }
+
+        .sister-index-def{
+            max-width:100%;
+        }
+
+        .sister-index-music{
+            top:10px;
+            right:10px;
+            width:38px;
+            height:38px;
+        }
+    }
+
+    @media (max-width:480px){
+        .sister-index-hand{
+            font-size:clamp(1.8rem,8vw,2.4rem);
+        }
+
+        .sister-index-hand.sister-index-big{
+            font-size:clamp(2.2rem,11vw,3.2rem);
+        }
+
+        .sister-index-cert{
+            padding:1.4rem 1rem;
+            border-width:8px;
+        }
+
+        .sister-index-cert h2{
+            font-size:1.6rem;
+        }
+
+        .sister-index-name{
+            font-size:2.1rem;
+        }
+
+        .sister-index-grid{
+            gap:6px;
+            width:94vw;
+        }
+
+        .sister-index-gsearch{
+            font-size:.85rem;
+            padding:.5rem 1rem;
+        }
+
+        .sister-index-tabs{
+            gap:.6rem;
+            font-size:.75rem;
+        }
+    }
+
+    @media (max-width:340px){
+        .sister-index-grid{
+            grid-template-columns:repeat(2,1fr);
+        }
+
+        .sister-index-screen{
+            width:130px;
+            height:210px;
+        }
+    }
+
+    /* short landscape phones */
+    @media (max-height:520px){
+        .sister-index-scene{
+            padding-bottom:1rem;
+            justify-content:flex-start;
+        }
+
+        .sister-index-cat.sister-index-c1,
+        .sister-index-cat.sister-index-c2{
+            width:56px;
+        }
+
+        .sister-index-bubble{
+            display:none;
+        }
+
+        .sister-index-next{
+            bottom:12px;
+        }
+    }
+
+    @media (prefers-reduced-motion:reduce){
+        *,
+        *::before,
+        *::after{
+            animation-duration:.01ms;
+            animation-iteration-count:1;
+        }
+    }
+
+    /* ---------- UTILITIES ---------- */
+
+    /* replaces the former inline style="" attributes */
+
+    .sister-index-sprite{
+        position:absolute;
+    }
+
+    .sister-index-cat-white{
+        --c:#fff3e6;
+    }
+
+    .sister-index-cat-peach{
+        --c:#ffd9b0;
+    }
+
+    .sister-index-cat-cream{
+        --c:#ffe9d2;
+    }
+
+    /* ==========================================================
+       EXTRA ANIMATIONS
+       (uses the individual translate / rotate / scale properties
+       so they never clash with GSAP's transform)
+       ========================================================== */
+
+    @keyframes sister-index-twinkle{50%{opacity:.15;scale:.6;rotate:25deg;}}
+    @keyframes sister-index-drift{50%{translate:0 -16px;rotate:12deg;}}
+    @keyframes sister-index-bobby{50%{translate:0 -6px;}}
+    @keyframes sister-index-ring{0%{scale:1;opacity:.7;}100%{scale:1.6;opacity:0;}}
+    @keyframes sister-index-beat{0%,100%{scale:1;}15%{scale:1.18;}30%{scale:1;}45%{scale:1.12;}}
+    @keyframes sister-index-breathe{50%{scale:1.03;rotate:1deg;}}
+    @keyframes sister-index-wiggle{0%,100%{rotate:-6deg;}50%{rotate:6deg;}}
+    @keyframes sister-index-shine{0%{left:-60%;}60%,100%{left:130%;}}
+    @keyframes sister-index-seal{0%,100%{rotate:-8deg;scale:1;}50%{rotate:8deg;scale:1.15;}}
+    @keyframes sister-index-flow{to{background-position:200% 0;}}
+    @keyframes sister-index-stripes{to{background-position:28px 0;}}
+    @keyframes sister-index-pulse{0%{box-shadow:0 0 0 0 #c8323c66,0 3px 10px #0002;}100%{box-shadow:0 0 0 14px #c8323c00,0 3px 10px #0002;}}
+    @keyframes sister-index-fade{from{opacity:0;}}
+    @keyframes sister-index-blink{50%{opacity:0;}}
+    @keyframes sister-index-hop{0%,100%{translate:0 0;rotate:0deg;}40%{translate:0 -42px;rotate:-8deg;}70%{translate:0 0;rotate:4deg;}}
+
+    .sister-index-stars span{animation:sister-index-twinkle 3s ease-in-out infinite;}
+
+    .sister-index-rain{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+    .sister-index-rain span{position:absolute;top:0;}
+    .sister-index-conf{position:fixed;z-index:30;width:8px;height:12px;border-radius:2px;pointer-events:none;}
+    .sister-index-trail{position:fixed;z-index:9;pointer-events:none;color:#f08aa0;font-size:13px;}
+
+    #notiTxt::after{content:'|';margin-left:2px;animation:sister-index-blink 1s steps(1) infinite;}
+
+    .sister-index-word{display:inline-block;white-space:nowrap;}
+    .sister-index-char{display:inline-block;}
+
+    /* scene 1 */
+    .sister-index-phone{position:relative;border-radius:36px;padding:0;}
+    .sister-index-phone::before,
+    .sister-index-phone::after{content:'';position:absolute;inset:0;border:3px solid #ff7fa3;border-radius:36px;pointer-events:none;animation:sister-index-ring 2s ease-out infinite;}
+    .sister-index-phone::after{animation-delay:1s;}
+    .sister-index-heart{animation:sister-index-beat 1.2s ease-in-out infinite;}
+    .sister-index-float{animation:sister-index-drift 4s ease-in-out infinite;animation-delay:var(--d,0s);}
+
+    /* scene 2 */
+    .sister-index-frame{animation:sister-index-breathe 4.5s ease-in-out infinite;}
+    .sister-index-def{animation:sister-index-bobby 5s ease-in-out infinite;}
+
+    /* scene 3 */
+    .sister-index-bar i{
+        background:linear-gradient(45deg,#fff3 25%,transparent 25%,transparent 50%,#fff3 50%,#fff3 75%,transparent 75%),linear-gradient(90deg,#c9a4e8,#9d6fd0);
+        background-size:28px 28px,100% 100%;
+        animation:sister-index-stripes .8s linear infinite;
+    }
+    .sister-index-cert{position:relative;overflow:hidden;}
+    .sister-index-cert::after{content:'';position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,#fff9,transparent);transform:skewX(-20deg);pointer-events:none;animation:sister-index-shine 3.2s ease-in-out 1.2s infinite;}
+    .sister-index-seal{display:inline-block;animation:sister-index-seal 2.6s ease-in-out infinite;}
+    .sister-index-name{
+        background:linear-gradient(90deg,#8a3350,#e0567d,#b79ad8,#8a3350);
+        background-size:200% 100%;
+        -webkit-background-clip:text;
+        background-clip:text;
+        color:transparent;
+        animation:sister-index-flow 5s linear infinite;
+    }
+
+    /* scene 4 */
+    .sister-index-chips span{transition:scale .25s,rotate .25s,background .25s;animation:sister-index-bobby 3.4s ease-in-out infinite;}
+    .sister-index-chips span:nth-child(2n){animation-delay:-1s;}
+    .sister-index-chips span:nth-child(3n){animation-delay:-2s;}
+    .sister-index-chips span:hover{scale:1.12;rotate:0deg;background:#ffe9ef;}
+    .sister-index-chips .sister-index-mid{animation:sister-index-wiggle 2.2s ease-in-out infinite;}
+
+    /* scene 5 */
+    .sister-index-grid figure{transition:rotate .3s,scale .3s,box-shadow .3s;}
+    .sister-index-grid figure:hover{rotate:0deg;scale:1.07;z-index:2;box-shadow:0 10px 22px #c8323c44;}
+    .sister-index-tabs span{transition:color .25s,border-color .25s;}
+    .sister-index-tabs span:hover{color:#1a73e8;}
+    .sister-index-lb{animation:sister-index-fade .25s ease-out;}
+
+    /* buttons, bubble, cats */
+    .sister-index-next{transition:scale .2s;}
+    .sister-index-next:hover{scale:1.25;}
+    .sister-index-again{animation:sister-index-beat 1.4s ease-in-out infinite;}
+    .sister-index-music.sister-index-is-playing{animation:sister-index-pulse 1.4s ease-out infinite;}
+    .sister-index-bubble{animation:sister-index-bobby 3s ease-in-out infinite;}
+
+    .sister-index-cat.sister-index-c1.sister-index-hop,
+    .sister-index-cat.sister-index-c2.sister-index-hop{animation:sister-index-bob 2.4s ease-in-out infinite,sister-index-hop .7s ease-out;}
+    .sister-index-cat.sister-index-c2.sister-index-hop{animation-delay:-1.2s,0s;}
+</style>
+</head>
+<body>
+
+    <!-- ============ BACKGROUND ============ -->
+
+    <div
+        class="sister-index-stars"
+        id="stars"
+    ></div>
+
+    <!-- ============ CAT SPRITES ============ -->
+
+    <svg
+        class="sister-index-sprite"
+        width="0"
+        height="0"
+        aria-hidden="true"
+    >
+
+        <defs>
+
+            <symbol
+                id="cat"
+                viewBox="0 0 100 100"
+            >
+                <path d="M16 42 L20 8 L44 26Z M84 42 L80 8 L56 26Z" fill="var(--c,#f6d9b8)" stroke="#6b4a3a" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M23 31 L25 18 L34 25Z M77 31 L75 18 L66 25Z" fill="#f4a3b5"/>
+                <ellipse cx="50" cy="60" rx="38" ry="33" fill="var(--c,#f6d9b8)" stroke="#6b4a3a" stroke-width="3"/>
+                <circle cx="35" cy="57" r="4.5" fill="#3a2420"/>
+                <circle cx="65" cy="57" r="4.5" fill="#3a2420"/>
+                <circle cx="36.5" cy="55.5" r="1.4" fill="#fff"/>
+                <circle cx="66.5" cy="55.5" r="1.4" fill="#fff"/>
+                <ellipse cx="24" cy="69" rx="6" ry="3.5" fill="#f7a8b8" opacity=".8"/>
+                <ellipse cx="76" cy="69" rx="6" ry="3.5" fill="#f7a8b8" opacity=".8"/>
+                <path d="M46 65 h8 l-4 5z" fill="#f08aa0"/>
+                <path d="M50 70 q-5 7 -10 3 M50 70 q5 7 10 3" stroke="#6b4a3a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                <path d="M8 62 l14 2 M8 72 l14 -3 M92 62 l-14 2 M92 72 l-14 -3" stroke="#6b4a3a" stroke-width="2" stroke-linecap="round"/>
+            </symbol>
+
+            <symbol
+                id="cool"
+                viewBox="0 0 100 100"
+            >
+                <use href="#cat" width="100" height="100"/>
+                <rect x="22" y="48" width="25" height="16" rx="6" fill="#222"/>
+                <rect x="53" y="48" width="25" height="16" rx="6" fill="#222"/>
+                <path d="M47 54 h6" stroke="#222" stroke-width="3"/>
+                <path d="M26 52 l8 0" stroke="#fff" stroke-width="2" opacity=".6"/>
+            </symbol>
+
+        </defs>
+
+    </svg>
+
+    <svg
+        class="sister-index-cat sister-index-c1 sister-index-cat-white"
+        viewBox="0 0 100 100"
+        aria-hidden="true"
+    ><use href="#cool"/></svg>
+
+    <svg
+        class="sister-index-cat sister-index-c2 sister-index-cat-peach"
+        viewBox="0 0 100 100"
+        aria-hidden="true"
+    ><use href="#cat"/></svg>
+
+    <div
+        class="sister-index-bubble"
+        id="bubble"
+    >click me!</div>
+
+    <!-- ============ AUDIO ============ -->
+
+    <audio
+        id="linesAudio"
+        src="assets/audio.mp3"
+        preload="auto"
+        loop
+    ></audio>
+
+    <button
+        class="sister-index-music"
+        id="musicBtn"
+        aria-label="Toggle music"
+        hidden
+    >🔊</button>
+
+    <main>
+
+        <!-- ============ 1. NOTIFICATION ============ -->
+
+        <section
+            class="sister-index-scene sister-index-is-active"
+            id="s1"
+        >
+
+            <h1 class="sister-index-hand sister-index-big">you have <span id="notiTxt"></span></h1>
+
+            <button
+                class="sister-index-phone"
+                id="phone"
+                aria-label="Open notification"
+            ><span class="sister-index-screen"><span class="sister-index-heart">❤</span><span class="sister-index-click">click me</span></span></button>
+
+            <span class="sister-index-float sister-index-f1">💗</span>
+
+            <span class="sister-index-float sister-index-f2">⭐</span>
+
+        </section>
+
+        <!-- ============ 2. INTRO ============ -->
+
+        <section
+            class="sister-index-scene"
+            id="s2"
+        >
+
+            <h1 class="sister-index-hand">For my Bestest ❤️</h1>
+
+            <div class="sister-index-intro">
+
+                <div class="sister-index-frame">
+
+                    <img
+                        id="introImg"
+                        src="assets/img_21.png"
+                        alt="My sister"
+                    />
+
+                </div>
+
+                <article class="sister-index-def">
+
+                    <h2>Sneaga 🫀🪄</h2>
+
+                    <small>Angel 🧚‍♀️</small>
+
+                    <p>someone who gets you better than anyone and can make you laugh without a word. Not by blood — by a random fight, a bar of Oreo Dairy Milk, and a bond that stuck.</p>
+
+                    <p><b>A sister from another world makes my life better</b></p>
+
+                </article>
+
+            </div>
+
+            <button
+                class="sister-index-next"
+                data-next
+                aria-label="Next"
+            >›</button>
+
+        </section>
+
+        <!-- ============ 3. AWARD ============ -->
+
+        <section
+            class="sister-index-scene"
+            id="s3"
+        >
+
+            <h1 class="sister-index-hand sister-index-big">Best Sister Award</h1>
+
+            <div class="sister-index-loader">
+
+                <div class="sister-index-bar"><i id="bar"></i></div>
+
+                <p id="pct">LOADING...</p>
+
+            </div>
+
+            <div
+                class="sister-index-cert"
+                id="cert"
+            >
+
+                <h2>Best Sister Award</h2>
+
+                <p>this award is presented to</p>
+
+                <div
+                    class="sister-index-name"
+                    id="nameOut"
+                >Sneaga 🫀🪄</div>
+
+                <p>for turning stranger into the best bond of my life, and for being the sister I truly needed.</p>
+
+                <div class="sister-index-seal">🏅</div>
+
+            </div>
+
+            <button
+                class="sister-index-next"
+                data-next
+                aria-label="Next"
+                hidden
+            >›</button>
+
+        </section>
+
+        <!-- ============ 4. YOU ARE MY ============ -->
+
+        <section
+            class="sister-index-scene"
+            id="s4"
+        >
+
+            <h1 class="sister-index-hand sister-index-big">YOU ARE MY</h1>
+
+            <div
+                class="sister-index-chips"
+                id="chips"
+            >
+
+                <span>my lifeline</span>
+
+                <span>my google maps 🗺️</span>
+
+                <span>Oreo Dairy Milk partner 🍫</span>
+
+                <svg
+                    class="sister-index-cat sister-index-mid sister-index-cat-cream"
+                    viewBox="0 0 100 100"
+                    aria-hidden="true"
+                ><use href="#cat"/></svg>
+
+                <span>my crybaby 😭</span>
+
+                <span>entertainment source 🎬</span>
+
+                <span>sister by choice 💞</span>
+
+                <span>my peace 🌷</span>
+
+            </div>
+
+            <button
+                class="sister-index-next"
+                data-next
+                aria-label="Next"
+            >›</button>
+
+        </section>
+
+        <!-- ============ 5. MEMORIES ============ -->
+
+        <section
+            class="sister-index-scene"
+            id="s5"
+        >
+
+            <h1 class="sister-index-hand sister-index-big">Memories</h1>
+
+            <div class="sister-index-gsearch">
+
+                <span>🔍 Moments of us ❤️</span>
+
+                <span>🎙️</span>
+
+            </div>
+
+            <nav
+                class="sister-index-tabs"
+                id="tabs"
+                aria-label="Memory filters"
+            >
+
+                <span
+                    data-f="img"
+                    class="sister-index-is-on"
+                >Images <sup>19</sup></span>
+
+                <span data-f="vid">Videos <sup>15</sup></span>
+
+                <span data-f="news">News</span>
+
+                <span data-f="mem">Memories <sup>1</sup></span>
+
+            </nav>
+
+            <div
+                class="sister-index-grid"
+                id="grid"
+            >
+
+                <p
+                    class="sister-index-nothing"
+                    hidden
+                >nothing here, only us 🐾</p>
+
+            </div>
+
+            <div
+                class="sister-index-lb"
+                id="lb"
+                hidden
+            >
+
+                <button
+                    class="sister-index-x"
+                    aria-label="Close"
+                >✕</button>
+
+                <div class="sister-index-box"></div>
+
+            </div>
+
+            <button
+                class="sister-index-next"
+                data-next
+                aria-label="Next"
+            >›</button>
+
+        </section>
+
+        <!-- ============ 6. STORY ============ -->
+
+        <section
+            class="sister-index-scene"
+            id="s6"
+        >
+
+            <article class="sister-index-letter">
+
+                <h2 class="sister-index-hand">A Story of How We Met ❤️</h2>
+
+                <p>One random day, we ended up fighting in front of your hostel. Little did I realize at that moment that you would become such an important person in my life. And on February 21, we turned that fight into a beautiful sister-and-brother bond. 🫂</p>
+
+                <p>You have proved to me that I truly have a sister of my own, and that means so much to me. Day by day, our bond keeps getting stronger, and we continue to create countless beautiful memories together.</p>
+
+                <p>If I hadn't bought you that Oreo Dairy Milk, I would have missed out on so much happiness. 😔❤️ A random fight completely changed my life forever, and I will always be grateful for that moment.</p>
+
+                <p>Wherever life takes me, my heart will always find its way back to you. ♥️ I will always try my best to make you happy, bring a smile to your face, and be there for you whenever you need me.</p>
+
+                <p>Thank you for coming into my life and becoming the sister I never knew I needed. 🫂❤️</p>
+
+            </article>
+
+            <button
+                class="sister-index-next"
+                data-next
+                aria-label="Next"
+            >›</button>
+
+        </section>
+
+        <!-- ============ 7. DEDICATION MESSAGE ============ -->
+
+        <section
+            class="sister-index-scene"
+            id="s7"
+        >
+
+            <h1 class="sister-index-hand">A Message For You 💌</h1>
+
+            <article class="sister-index-letter">
+
+                <p class="sister-index-note-text">You mean so much to me, and I’m truly grateful to have you in my life. You gave me something I never knew I needed—a sister of my own. I will always be thankful for that. ❤️
+
+                  Thank you for standing by me during my lowest moments, when I needed someone the most. Your support, care, and belief in me have meant more than words can ever express.
+
+                  I want to make you a promise: no matter what happens or where life takes us, I will never let you down. I will always be there for you whenever you need me, at any time and at any cost. You never have to face anything alone because you will always have me by your side. 🫂
+
+                  You are truly a gem in my life. You brought light into my darkest days, and you are one of the biggest reasons behind so many of my smiles and happiest memories.
+
+                  The moments I have spent with you, Naveen, Reshma, Sathish, and Yash are some of the most beautiful memories I will always cherish. Being with all of you has filled my life with so much happiness, laughter, and peace. Because of you, I met wonderful people and built beautiful bonds that I will always treasure. ❤️
+
+                  More than just my sister, you are my best friend, my biggest supporter, and someone who always takes care of me. Honestly, I couldn't have asked for a better person to have in my life.
+
+                  May this year bring you endless happiness, good health, success, and everything your heart wishes for. You deserve all the love, happiness, and joy in this world. ✨
+
+                  You're not just my sister—you have been like a second mother to me. ❤️ I truly have no words to describe how special you are or how much you mean to me. Thank you for showering me with endless love, care, and support, and for always standing by my side.
+
+                  I'm beyond grateful to have you in my life. Your kindness, strength, and the way you look after me mean more than you'll ever know. No matter what happens, I will always cherish our bond and be there for you, just as you have always been there for me.
+
+                  Love youuu so much, my sister! ❤️🫂✨</p>
+
+                <!-- <p>Wishing you all the happiness, love, peace, and success you truly deserve. Never forget how special, strong, and deeply loved you are. ❤️</p> -->
+
+                <p class="sister-index-by">— your brother, always</p>
+
+            </article>
+
+            <button
+                class="sister-index-next"
+                data-next
+                aria-label="Next"
+            >›</button>
+
+        </section>
+
+        <!-- ============ 8. A FEW LINES ============ -->
+
+        <section
+            class="sister-index-scene"
+            id="s8"
+        >
+
+            <h1 class="sister-index-hand sister-index-big">A Few Lines for you 💫</h1>
+
+            <article class="sister-index-letter sister-index-lines-card">
+
+                <q>செல்வ மகள் அழுகை போல் 🥹🎶
+                  ஒரு சில்லென்ற சங்கீதம் கேட்டதில்லை 🎼💗
+                  பொன் மகளின் புன்னகை போல் 👧🏻🌸
+                  யுக பூக்களுக்கு புன்னகைக்க தெரியவில்லை 🌷✨
+
+                  என் பிள்ளை எட்டு வைத்த நடையைப் போல 👣🧸
+                  எந்த இலக்கண கவிதையும் நடந்ததில்லை 🥺❤️
+                  முத்துக்கள் தெரிக்கின்ற மழலை போல 🫧💎
+                  ஒரு முன்னூறு மொழிகளில் வார்த்தை இல்லை 🤍🕊️
+
+                  தந்தைக்கும் தாய் அமுதம் சுரந்ததம்மா 🥹💞
+                  என் தங்கத்தை மார்போடு அணைக்கையிலே 🫂❤️‍🩹</q> <br>
+                <br>
+
+                <q>Not by blood, but by a fight, a Dairy Milk, and a promise.</q>
+
+                <q>You are the sister my heart chose.</q>
+
+                <q>Every smile of yours is a win for me.</q>
+
+                <q>Wherever I go, my heart finds its way back to you.</q>
+
+                <q>Thank you for being the sister I never knew I needed. 🫂</q>
+
+                <button
+                    class="sister-index-again"
+                    id="again"
+                >↺ watch again</button>
+
+            </article>
+
+        </section>
+
+    </main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<script>
+(function(){
+  'use strict';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var $ = function(s,c){return (c||document).querySelector(s)};
+  var $$ = function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+
+  var scenes = $$('.sister-index-scene');
+  var cur = 0;
+  var hasGsap = !!window.gsap;
+
+  /* ---------- Safe animation helpers (page still works without GSAP) ---------- */
+  function to(t,v){ if(hasGsap){ return gsap.to(t,v); } if(v && v.onComplete){ v.onComplete(); } }
+  function fromTo(t,a,b){ if(hasGsap){ return gsap.fromTo(t,a,b); } }
+  function from(t,v){ if(hasGsap){ return gsap.from(t,v); } }
+  function set(t,v){ if(hasGsap){ return gsap.set(t,v); } }
+
+  /* ---------- Background stars ---------- */
+  var starsBox = $('#stars');
+  for(var i = 0; i < 22; i++){
+    var s = document.createElement('span');
+    s.textContent = ['★','✦','♥'][i % 3];
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.animationDelay = (-Math.random() * 3) + 's';
+    starsBox.appendChild(s);
+    if(hasGsap && !reduce){ gsap.to(s,{y:-14,duration:2 + Math.random() * 2,yoyo:true,repeat:-1,ease:'sine.inOut'}); }
+  }
+
+  /* ---------- Cute notes (sticky notes drifting in background) ---------- */
+  ['miss you ♡','my sis 🌸','meow ♡','Oreo? 🍫','best sis ever','hehe ✨','hugs 🫂','smile pls 😊'].forEach(function(t,i){
+    var n = document.createElement('div');
+    n.className = 'sister-index-sticky';
+    n.textContent = t;
+    n.style.left = (6 + (i * 37) % 80) + '%';
+    n.style.top = (8 + (i * 53) % 78) + '%';
+    n.style.rotate = (i % 2 ? 6 : -6) + 'deg';
+    n.style.opacity = .75;
+    starsBox.appendChild(n);
+    if(hasGsap && !reduce){ gsap.to(n,{y:-18,x:i % 2 ? 10 : -10,duration:3 + i * .3,yoyo:true,repeat:-1,ease:'sine.inOut'}); }
+  });
+
+  /* ---------- Typing: "a notification!" ---------- */
+  var msg = 'a notification!', k = 0;
+  var typer = setInterval(function(){
+    $('#notiTxt').textContent = msg.slice(0, ++k);
+    if(k >= msg.length){ clearInterval(typer); }
+  }, 90);
+
+  /* ---------- Intro photo fallback ---------- */
+  var introImg = $('#introImg');
+  introImg.addEventListener('error', function(){
+    var ph = document.createElement('div');
+    ph.className = 'sister-index-ph';
+    ph.textContent = '📷 add assets/img_16.jpg';
+    introImg.replaceWith(ph);
+  });
+
+  /* ---------- Speech bubble per scene ---------- */
+  var says = ['click me! 👆','you deserve that 🏆','best sister award!','you are my... ❤️','look at us 📸','how it all began 🥹','read this, sis 💌','just a few lines ✨'];
+  function say(n){
+    var b = $('#bubble');
+    b.textContent = says[n] || 'meow ♡';
+    fromTo(b,{scale:.5,opacity:0},{scale:1,opacity:1,duration:.5,ease:'back.out(3)'});
+  }
+  say(0);
+
+  /* ---------- Scene navigation ---------- */
+  function go(n){
+    if(!scenes[n]){ return; }
+    if(n === 7){ playLines(); }
+    var fromScene = scenes[cur], toScene = scenes[n];
+    to(fromScene,{opacity:0,y:-20,duration:.4,onComplete:function(){
+      fromScene.classList.remove('sister-index-is-active');
+      toScene.classList.add('sister-index-is-active');
+      cur = n;
+      fromTo(toScene.children,{opacity:0,y:30},{opacity:1,y:0,stagger:.12,duration:.7,ease:'back.out(1.4)'});
+      set(fromScene,{opacity:1,y:0});
+      say(n);
+      enterFx(n);
+      if(n === 2){ award(); }
+      if(n === 3){ from('.sister-index-chips span',{scale:0,rotate:20,stagger:.15,duration:.6,ease:'back.out(2.5)'}); }
+      if(n === 7){ from('.sister-index-lines-card q',{opacity:0,y:14,stagger:.7,delay:.5,duration:.8}); }
+    }});
+  }
+
+  /* ---------- Award loader ---------- */
+  function award(){
+    var bar = $('#bar'), pct = $('#pct'), cert = $('#cert'), nx = $('#s3 .sister-index-next');
+    var loader = $('.sister-index-loader'), heading = $('#s3 > h1');
+    cert.style.display = 'none';
+    nx.hidden = true;
+    pct.textContent = 'LOADING...';
+    if(!hasGsap){
+      loader.style.display = 'none'; heading.style.display = 'none';
+      cert.style.display = 'block'; nx.hidden = false;
+      return;
+    }
+    var o = {v:0};
+    gsap.fromTo(bar,{width:0},{width:'100%',duration:2.6,ease:'power1.inOut'});
+    gsap.to(o,{v:100,duration:2.6,onUpdate:function(){ pct.textContent = 'LOADING ' + Math.round(o.v) + '%'; },onComplete:function(){
+      gsap.to([loader,heading],{opacity:0,duration:.4,onComplete:function(){
+        loader.style.display = 'none';
+        heading.style.display = 'none';
+        cert.style.display = 'block';
+        nx.hidden = false;
+        gsap.fromTo(cert,{scale:.6,rotate:-6,opacity:0},{scale:1,rotate:0,opacity:1,duration:.8,ease:'elastic.out(1,.6)'});
+        gsap.from('.sister-index-seal',{scale:0,delay:.7,duration:.6,ease:'back.out(3)'});
+        confetti(window.innerWidth / 2, window.innerHeight * .45, 60);
+      }});
+    }});
+  }
+
+  /* ---------- Audio for "A Few Lines" ---------- */
+  var linesAudio = $('#linesAudio'), musicBtn = $('#musicBtn');
+  function playLines(){
+    linesAudio.currentTime = 0;
+    var p = linesAudio.play();
+    if(p && p.catch){ p.catch(function(){ musicBtn.textContent = '🔇'; }); }
+    musicBtn.hidden = false;
+    musicBtn.textContent = '🔊';
+  }
+  musicBtn.addEventListener('click', function(e){
+    e.stopPropagation();
+    if(linesAudio.paused){ linesAudio.play(); musicBtn.textContent = '🔊'; }
+    else{ linesAudio.pause(); musicBtn.textContent = '🔇'; }
+  });
+
+  /* ---------- Buttons ---------- */
+  $('#phone').addEventListener('click', function(){ go(1); });
+  $$('[data-next]').forEach(function(b){ b.addEventListener('click', function(){ go(cur + 1); }); });
+  $('#again').addEventListener('click', function(){ location.reload(); });
+
+  /* ---------- Memories: 1 memory photo, 18 images, 15 videos ---------- */
+  var grid = $('#grid'), lb = $('#lb'), box = $('.sister-index-box', lb);
+  var items = [{t:'mem',src:'assets/Sister%20and%20Brother%20Forever%20Bond.png'}];
+  for(var a = 1; a <= 18; a++){ items.push({t:'img',src:'assets/img_' + a + '.jpg'}); }
+  for(var b = 1; b <= 15; b++){ items.push({t:'vid',src:'assets/vdo_' + b + '.mp4'}); }
+
+  items.forEach(function(it){
+    var fg = document.createElement('figure');
+    fg.dataset.t = it.t;
+    fg.dataset.name = decodeURIComponent(it.src.split('/').pop());
+    if(it.t === 'vid'){
+      fg.innerHTML = '<video src="' + it.src + '#t=0.5" muted playsinline preload="metadata"></video><i class="sister-index-play">▶</i>';
+    }else{
+      fg.innerHTML = '<img src="' + it.src + '" alt="" loading="lazy">';
+    }
+    fg.firstChild.addEventListener('error', function(){ fg.classList.add('sister-index-is-empty'); });
+    fg.addEventListener('click', function(){
+      if(fg.classList.contains('sister-index-is-empty')){ return; }
+      box.innerHTML = '';
+      if(it.t === 'vid'){
+        var v = document.createElement('video');
+        v.src = it.src; v.controls = true; v.autoplay = true; v.playsInline = true;
+        box.appendChild(v);
+      }else{
+        var im = document.createElement('img');
+        im.src = it.src;
+        box.appendChild(im);
+      }
+      lb.hidden = false;
+      from(box,{scale:.6,opacity:0,duration:.4,ease:'back.out(2)'});
+    });
+    grid.insertBefore(fg, $('.sister-index-nothing', grid));
+  });
+
+  function filt(f){
+    var n = 0;
+    $$('figure', grid).forEach(function(fg){
+      var ok = f === 'all' || fg.dataset.t === f;
+      fg.style.display = ok ? '' : 'none';
+      if(ok){ n++; }
+    });
+    grid.classList.toggle('sister-index-is-one', n === 1);
+    $('.sister-index-nothing', grid).hidden = n > 0;
+    from($$('figure:not([style*="none"])', grid),{scale:.8,opacity:0,duration:.4,stagger:.02,ease:'back.out(2)'});
+  }
+
+  $$('#tabs [data-f]').forEach(function(t){
+    t.addEventListener('click', function(){
+      $$('#tabs [data-f]').forEach(function(x){ x.classList.remove('sister-index-is-on'); });
+      t.classList.add('sister-index-is-on');
+      filt(t.dataset.f);
+    });
+  });
+  filt('img');
+
+  function closeLb(){ lb.hidden = true; box.innerHTML = ''; }
+  lb.addEventListener('click', function(e){
+    if(e.target === lb || e.target.classList.contains('sister-index-x')){ closeLb(); }
+  });
+
+  /* ---------- EXTRA ANIMATIONS ---------- */
+  var canFx = hasGsap && !reduce;
+
+  /* extra floaty emojis on the first scene */
+  [['🌸','70%','70%','-1s'],['✨','28%','22%','-2s'],['🎀','82%','45%','-.5s'],['🧸','8%','48%','-3s']].forEach(function(f){
+    var e = document.createElement('span');
+    e.className = 'sister-index-float';
+    e.textContent = f[0];
+    e.style.left = f[1]; e.style.top = f[2]; e.style.setProperty('--d', f[3]);
+    $('#s1').appendChild(e);
+  });
+
+  /* falling petals + hearts */
+  var rain = document.createElement('div');
+  rain.className = 'sister-index-rain';
+  rain.setAttribute('aria-hidden','true');
+  starsBox.after(rain);
+  function petal(){
+    if(document.hidden){ return; }
+    var p = document.createElement('span'), dur = 7 + Math.random() * 5;
+    p.textContent = ['🌸','💗','✨','🤍','🎀'][Math.floor(Math.random() * 5)];
+    p.style.left = Math.random() * 100 + '%';
+    p.style.fontSize = (12 + Math.random() * 16) + 'px';
+    rain.appendChild(p);
+    gsap.fromTo(p,{y:-40,x:0,rotate:0},{y:window.innerHeight + 40,x:(Math.random() - .5) * 120,rotate:(Math.random() - .5) * 360,duration:dur,ease:'none',onComplete:function(){ p.remove(); }});
+    gsap.fromTo(p,{opacity:0},{opacity:.6,duration:1});
+    gsap.to(p,{opacity:0,duration:1,delay:dur - 1});
+  }
+  if(canFx){ setInterval(petal, 900); petal(); }
+
+  /* confetti burst */
+  function confetti(x, y, n){
+    if(!canFx){ return; }
+    var cols = ['#ff7fa3','#f4b6c8','#ffd54f','#b79ad8','#7fd1ff','#c8323c'];
+    for(var q = 0; q < n; q++){
+      var c = document.createElement('i'), dx = (Math.random() - .5) * 380, up = 120 + Math.random() * 200;
+      c.className = 'sister-index-conf';
+      c.style.background = cols[q % cols.length];
+      c.style.left = x + 'px'; c.style.top = y + 'px';
+      if(q % 3 === 0){ c.style.borderRadius = '50%'; }
+      document.body.appendChild(c);
+      gsap.timeline({onComplete:(function(el){ return function(){ el.remove(); }; })(c)})
+        .to(c,{x:dx * .6,y:-up,rotate:Math.random() * 360,duration:.5,ease:'power2.out'})
+        .to(c,{x:dx,y:window.innerHeight - y + 40,rotate:'+=360',opacity:0,duration:1.5 + Math.random(),ease:'power1.in'});
+    }
+  }
+
+  /* heading: letters pop in one by one, wave on hover */
+  function splitHeading(el){
+    if(!el || el.children.length){ return null; }
+    var txt = el.textContent;
+    el.textContent = '';
+    el.setAttribute('aria-label', txt);
+    txt.split(' ').forEach(function(w, wi, arr){
+      var word = document.createElement('span');
+      word.className = 'sister-index-word';
+      word.setAttribute('aria-hidden','true');
+      Array.from(w).forEach(function(ch){
+        var c = document.createElement('span');
+        c.className = 'sister-index-char';
+        c.textContent = ch;
+        word.appendChild(c);
+      });
+      el.appendChild(word);
+      if(wi < arr.length - 1){ el.appendChild(document.createTextNode(' ')); }
+    });
+    var chars = $$('.sister-index-char', el);
+    el.addEventListener('mouseenter', function(){
+      gsap.fromTo(chars,{y:0},{y:-10,yoyo:true,repeat:1,stagger:.03,duration:.18,ease:'power1.out',overwrite:'auto'});
+    });
+    return chars;
+  }
+
+  /* cats hop when the page changes */
+  function hopCats(){
+    $$('.sister-index-c1, .sister-index-c2').forEach(function(c){
+      c.classList.remove('sister-index-hop');
+      void c.getBoundingClientRect();
+      c.classList.add('sister-index-hop');
+    });
+  }
+
+  function enterFx(n){
+    if(!canFx){ return; }
+    var sc = scenes[n], chars = splitHeading($('.sister-index-hand', sc));
+    if(chars){ gsap.fromTo(chars,{y:30,opacity:0,rotate:-15},{y:0,opacity:1,rotate:0,stagger:.04,duration:.6,delay:.2,ease:'back.out(2)'}); }
+    hopCats();
+    if(n === 4){
+      var gs = $('.sister-index-gsearch span'), full = gs.dataset.full || gs.textContent, arr = Array.from(full), q = 0;
+      gs.dataset.full = full; gs.textContent = ''; clearInterval(gs._t);
+      gs._t = setInterval(function(){ gs.textContent = arr.slice(0, ++q).join(''); if(q >= arr.length){ clearInterval(gs._t); } }, 70);
+    }
+    if(n === 5 || n === 6){
+      from($$('.sister-index-letter p', sc),{opacity:0,y:20,stagger:.35,delay:.4,duration:.7,ease:'power2.out'});
+    }
+    if(n === 7){
+      setTimeout(function(){
+        confetti(window.innerWidth * .2, window.innerHeight * .6, 35);
+        confetti(window.innerWidth * .8, window.innerHeight * .6, 35);
+      }, 600);
+    }
+  }
+
+  /* music button pulses while playing */
+  linesAudio.addEventListener('play', function(){ musicBtn.classList.add('sister-index-is-playing'); });
+  linesAudio.addEventListener('pause', function(){ musicBtn.classList.remove('sister-index-is-playing'); });
+
+  /* mouse sparkle trail + star parallax */
+  var lastTrail = 0;
+  document.addEventListener('pointermove', function(e){
+    if(!canFx || e.pointerType !== 'mouse'){ return; }
+    var now = performance.now();
+    if(now - lastTrail > 60){
+      lastTrail = now;
+      var t = document.createElement('span');
+      t.className = 'sister-index-trail';
+      t.textContent = ['✦','♥','✧'][Math.floor(Math.random() * 3)];
+      t.style.left = e.clientX + 'px'; t.style.top = e.clientY + 'px';
+      document.body.appendChild(t);
+      gsap.to(t,{y:22,opacity:0,scale:0,duration:.8,ease:'power1.out',onComplete:function(){ t.remove(); }});
+    }
+    gsap.to(starsBox,{x:(e.clientX / window.innerWidth - .5) * -24,y:(e.clientY / window.innerHeight - .5) * -24,duration:1.2,ease:'power2.out',overwrite:'auto'});
+  });
+
+  /* ---------- Click hearts ---------- */
+  document.addEventListener('pointerdown', function(e){
+    if(!hasGsap || reduce){ return; }
+    for(var j = 0; j < 5; j++){
+      var p = document.createElement('span');
+      p.className = 'sister-index-pop';
+      p.textContent = ['❤','💗','✨','🐾','⭐'][j];
+      p.style.left = e.clientX + 'px';
+      p.style.top = e.clientY + 'px';
+      document.body.appendChild(p);
+      gsap.to(p,{x:(Math.random() - .5) * 90,y:-60 - Math.random() * 60,opacity:0,rotate:(Math.random() - .5) * 60,duration:1.1,ease:'power2.out',onComplete:(function(el){ return function(){ el.remove(); }; })(p)});
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
